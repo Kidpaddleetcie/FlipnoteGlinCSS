@@ -1,0 +1,496 @@
+@charset "UTF-8";
+ :root {
+    --theatre-primary: #9765D4;
+    --theatre-secondary: #aa80df;
+}
+
+.theme-body {
+    background-attachment: fixed;
+}
+
+.theme-panel-title {
+    color: #ffffff;
+    background-color: var(--theatre-primary);
+}
+
+.theme-link {
+    /* color: #5A02C6 */
+    color: #FAFAFA;
+}
+
+.theme-link:hover {
+    color: #5A02C6;
+    text-decoration: underline;
+}
+
+.theme-link-inverted {
+    color: #ffffff;
+}
+
+.theme-link-inverted:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.theme-navbar-background {
+    background-color: #9765D4C2;
+    border-color: #ffffff;
+    border-bottom-width: 2px;
+}
+
+.theme-navbar-text li a {
+    color: #fff;
+}
+
+.theme-navbar-text li a:hover {
+    color: var(--theatre-primary);
+    background-color: #fff;
+}
+
+.theme-navbar-text .open a,
+.theme-navbar-text .open a:hover,
+.theme-navbar-text .open a:focus {
+    color: var(--theatre-primary);
+    background-color: #fff;
+}
+
+.theme-navbar-text .dropdown-menu a,
+.theme-navbar-text .dropdown-menu a:hover,
+.theme-navbar-text .dropdown-menu a:focus {
+    font-weight: bold;
+    color: #5A02C6;
+    background-color: #fff;
+}
+
+
+/* hacky fixes 2021.04.01 */
+
+.panel-body-only,
+.card-body.theme-panel-body {
+    background-color: #aa80dfd4;
+    color: white;
+}
+
+th.upload-status-indicator .fad.fa-check-circle::after {
+    color: white;
+}
+
+th.upload-status-indicator .fa-check-circle::before {
+    background-color: white;
+    border-radius: 50px;
+}
+
+div#profile-stats li,
+div#flipnote-stats li {
+    background-color: white;
+}
+
+ul.commentlist .comment {
+    background-color: #b071e347;
+}
+
+.btn.btn-custom-active {
+    background: var(--theatre-secondary);
+    border: solid 1px var(--theatre-secondary);
+}
+
+.btn-custom {
+    color: #946bc8;
+    border: 1px solid #946bc8;
+}
+
+#welcome-user-preview-stats-1 {
+    color: #fff;
+}
+
+
+/* player */
+
+
+/* Flipnote Player */
+
+.player__controls {
+    background: var(--theatre-secondary);
+    color: #fff;
+}
+
+.player__scrubber {
+    background: var(--theatre-scrubber-track);
+}
+
+.player__controls a.controls__link {
+    color: #fff;
+}
+
+.scrubber__track__handle {
+    background-color: var(--theatre-primary);
+}
+
+.scrubber__track__played {
+    background-color: var(--theatre-primary);
+}
+
+
+/* Frog on embedded player */
+
+.controls__sudomemo__link>a>img {
+    filter: saturate(0) brightness(100) invert(54%) sepia(78%) saturate(2606%) hue-rotate(228deg) brightness(85%) contrast(94%);
+}
+
+.entry-title>h1:nth-child(1) {
+    color: white;
+}
+
+
+/* topic banner */
+
+.topic-banner img {
+    filter: contrast(1.1) brightness(1.07) hue-rotate(160deg);
+}
+
+.topic-banner {
+    position: relative;
+}
+
+.topic-banner::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(255, 0, 134) 0%, rgb(0, 117, 255) 100%);
+    mix-blend-mode: overlay
+}
+
+
+/* discord ad thing */
+
+a[data-banner-name="discord_slim"] img {
+    filter: contrast(1.1) brightness(1.83) hue-rotate(44deg);
+}
+
+a[data-banner-name="discord_slim"] {
+    position: relative;
+}
+
+a[data-banner-name="discord_slim"]:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(255, 0, 134) 0%, rgb(0, 117, 255) 100%);
+    mix-blend-mode: overlay
+}
+
+
+/* welcome banner frogs */
+
+#frog1 img,
+#frog2 img {
+    filter: hue-rotate(156deg) brightness(1.16);
+}
+
+.welcome-frog {
+    stroke: #fff;
+}
+
+.about-sudomemo .room {
+    color: var(--theatre-primary);
+    border: 3px solid var(--theatre-primary);
+}
+
+.about-sudomemo {
+    background-color: var(--theatre-primary);
+}
+
+.about-sudomemo p,
+.about-sudomemo .big,
+.about-sudomemo .left,
+.about-sudomemo .right,
+.about-sudomemo .room {
+    background-color: var(--theatre-primary);
+    border: 3px solid var(--theatre-secondary);
+    color: white;
+}
+
+a.navbar-brand {
+    content: url(/theatre_assets/theme/sudomemo_vapor/sudomemo_logo_vapor.svg);
+}
+
+
+/* navbar fixes */
+
+.navbar-custom .navbar-toggler:hover,
+.navbar-custom .navbar-toggler:focus {
+    background-color: var(--theatre-secondary);
+}
+
+
+/* tint over the whole thing */
+
+
+/*
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: .1;
+    pointer-events: none;
+    background: #6764bb;
+    width: 100%;
+    height: 100%;
+}
+
+*/
+
+
+/* Frog on embedded player */
+
+.controls__sudomemo__link>a>img {
+    filter: saturate(0) brightness(100);
+}
+
+
+/* Strange positioning difference in embedded page. */
+
+div.embedded-player .scrubber__track__handle:after {
+    top: -4px !important;
+}
+
+.panel-common>.card-footer {
+    background-color: #b071e347;
+}
+
+
+/* windows xp */
+
+a,
+.theme-link {
+    font-weight: bold;
+    color: #FAFAFA;
+    text-shadow: -1px -1px 1px #C774E8, 1px -1px 1px #C774E8, -1px 1px 1px #C774E8, 1px 1px 1px #C774E8;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.64516;
+    }
+    5% {
+        opacity: 0.14498;
+    }
+    10% {
+        opacity: 0.45859;
+    }
+    15% {
+        opacity: 0.96701;
+    }
+    20% {
+        opacity: 0.39187;
+    }
+    25% {
+        opacity: 0.75238;
+    }
+    30% {
+        opacity: 0.15513;
+    }
+    35% {
+        opacity: 0.09817;
+    }
+    40% {
+        opacity: 0.1101;
+    }
+    45% {
+        opacity: 0.38346;
+    }
+    50% {
+        opacity: 0.23513;
+    }
+    55% {
+        opacity: 0.51059;
+    }
+    60% {
+        opacity: 0.32321;
+    }
+    65% {
+        opacity: 0.97128;
+    }
+    70% {
+        opacity: 0.1675;
+    }
+    75% {
+        opacity: 0.95425;
+    }
+    80% {
+        opacity: 0.04611;
+    }
+    85% {
+        opacity: 0.25029;
+    }
+    90% {
+        opacity: 0.02162;
+    }
+    95% {
+        opacity: 0.04055;
+    }
+    100% {
+        opacity: 0.4636;
+    }
+}
+
+
+/* crt effect */
+
+
+/*
+.player__stage {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #121010;
+}
+*/
+
+
+/*
+.player__stage::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.05);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+}
+
+.player__stage::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+*/
+
+
+/* winxp button */
+
+.btn.btn-custom,
+.btn.btn-primary {
+    text-align: center;
+    color: #070707;
+    background: #f8f4f1;
+    border: 2px solid;
+    border-radius: 4px;
+    border-color: #8aa2cb;
+}
+
+.btn.btn-custom:hover,
+.btn.btn-primary:hover {
+    border-bottom-color: #efc47b;
+}
+
+.btn.btn-custom:focus,
+.btn.btn-primary:focus,
+.btn.btn-custom:focus-within,
+.btn.btn-primary:focus-within {
+    border-bottom-color: #8aa2cb;
+}
+
+.card {
+    background: #b071e347;
+    border: 1px solid;
+    border-color: #044cdc;
+    border-top-color: #298cfe;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    outline: 0;
+}
+
+.card .card-header {
+    text-align: left;
+    color: #f8f4f1;
+    background: linear-gradient(to bottom, #298cfe 0%, #044cdc 10%, #044cdc 60%, #005cf5 80%, #044cdc 100%);
+    outline: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.card .card-header .card-title {
+    font-size: 0.85rem;
+    text-shadow: 1px 1px #070707;
+    margin-left: 1px;
+    margin-bottom: 0px;
+}
+
+.card .card-body {
+    background: #b071e347 !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+div#welcome-card,
+div.profile-head,
+div.flipnote-player-card,
+div.flipnote-details-card {
+    background: var(--bg-vapor-grid), #b071e347;
+    border: none;
+}
+
+ul.flipnote-list li div.box-container {
+    background-color: #5C3D7F;
+}
+
+.search-box h1 {
+    color: #fff;
+}
+
+div.theatre-footer>div>div:nth-child(1) {
+    color: #fff;
+}
+
+
+/* more player fixes */
+
+.flipnote-container {
+    border: 3px solid var(--theatre-secondary);
+    background-color: var(--theatre-secondary);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.player__scrubber {
+    /* background: var(--theatre-scrubber-track); */
+    background: #d4b3ff;
+}
+
+
+/* comments tweak */
+
+ul.commentlist>li>div.comment-container img {
+    border-radius: 5px;
+}
