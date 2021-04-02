@@ -16,7 +16,7 @@
 (function() {
     'use strict';
     let tspliteuh = document.URL.split('/');
-    const elements = document.getElementsByTagName("link");
+    const elements = document.getElementsByTagName("link").rel("stylesheet");
     if (tspliteuh[2] === "www.sudomemo.net") {
         for (let ii = 0; ii < elements.length; ii++) {
             if (elements[ii].href === '/theatre_assets/css/main.css?ver=20210402_01') {
