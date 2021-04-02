@@ -6,6 +6,11 @@
 // @author       Glin Kidpaddleetcie
 // @grant        none
 // @connect     sudomemo.net
+// @run-at      document-end
+// @include     http://*
+// @include     https://*
+// @updateURL   https://raw.githubusercontent.com/Kidpaddleetcie/FlipnoteGlinCSS/main/FlipnoteGlinCSS.js
+// @downloadURL https://raw.githubusercontent.com/Kidpaddleetcie/FlipnoteGlinCSS/main/FlipnoteGlinCSS.js
 // ==/UserScript==
 
 (function() {
@@ -17,7 +22,7 @@
             console.log(elements[ii]);
             if (elements[ii].href === '/theatre_assets/css/main.css?ver=20210402_01') {
                 console.log(elements[ii]);
-                elements[ii].href = 'https://raw.githubusercontent.com/Kidpaddleetcie/FlipnoteGlinCSS/main/FlipnoteGlinCSS';
+                elements[ii].href = 'https://raw.githubusercontent.com/Kidpaddleetcie/FlipnoteGlinCSS/main/FlipnoteGlinCSS.css';
             }
         }
 
