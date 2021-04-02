@@ -19,7 +19,6 @@
     const elements = document.getElementsByTagName("link");
     if (tspliteuh[2] === "www.sudomemo.net") {
         for (let ii = 0; ii < elements.length; ii++) {
-            console.log(elements[ii]);
             if (elements[ii].href === '/theatre_assets/css/main.css?ver=20210402_01') {
                 console.log(elements[ii]);
                 elements[ii].href = 'https://raw.githubusercontent.com/Kidpaddleetcie/FlipnoteGlinCSS/main/FlipnoteGlinCSS.css';
